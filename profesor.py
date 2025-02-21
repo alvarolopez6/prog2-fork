@@ -1,3 +1,5 @@
+from random import randint
+
 class Profesor:
     total_profesores = 0
     def __init__(self, nombre: str, especialidad: str, cursos_asignados: list[str]):
@@ -33,4 +35,4 @@ class Profesor:
 
     @staticmethod
     def esta_disponible_para_nuevo_curso():
-        print("Sí, lo está")
+        return True if randint(0, 1) == 1 else False
